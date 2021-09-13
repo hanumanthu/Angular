@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.--> 
+<div style = "text-align:center"> 
+    <h1> Welcome to {{ title }} </h1> 
+    <p>
+        {{newcomponent}}
+    </p>
+ </div>
+ <div>
+     Months :
+     <select>
+         <option *ngFor = "let i of months">
+             {{i}}
+         </option>
+     </select>
+ </div>
+
+<div> 
+    <span *ngIf = "IsFlag; then Flag else NonFlag">Condition is valid.</span>  
+    <ng-template #Flag>Condition is valid.</ng-template>
+    <ng-template #NonFlag>Condition is Invalid.</ng-template>
+    
+ </div>
